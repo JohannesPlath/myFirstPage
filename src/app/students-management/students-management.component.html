@@ -1,0 +1,57 @@
+<div class="body" >
+  <div class="LoginArea">
+    <form  class="AdminSelectBottom">
+      <h1>Students-Managemant</h1>
+    </form>
+    <div class="AdminSelectBottom">
+      <form action="AdminAddStudents.html">
+        <div class="normalText">
+          <button id="AddStuffBotton" type="submit"  >Add: </button>
+        </div>
+      </form>
+    </div>
+    <div class="AdminSelectBottom">
+      <div class="normalText">
+        <form action="none">
+          <button id="UpdateStuffButton" type="submit"  >Remove: </button>
+        </form>
+      </div>
+    </div>
+    <div class="AdminSelectBottom">
+      <div class="normalText">
+        <form action="none">
+          <button id="RemoveStuffButton" type="submit"  >Update: </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div CLASS="LoginArea" style="justify-content: space-around">
+    <div class="drum" style="position: center">
+      <select name="courseOptions" class="dropdown" id="SS/WS" required onchange="showSelectedList()" style="left: 300px">
+        <option value="Summer">Select by SummerS.</option>
+        <option value="Winter">Select by WinterS.</option>
+
+      </select>
+    </div>
+    <br>
+    <div class="drum" style="position: center">
+      <select name="courseOptions" class="dropdown" id="Department" required onchange="showSelectedList()" style="left: 300px">
+        <option value="Maschienenbau">Maschienenbau</option>
+        <option value="IT">Informatik</option>
+        <option value="Wirtschaftswissenschaft">Wirtschaftswissenschaft</option>
+        <option value="WEB">Web Dev.</option>
+      </select>
+    </div>
+
+
+
+  </div>
+
+
+  <div class="list" >
+    <h2>actual list of students:</h2>
+    <ul id="actualisedList">
+    </ul>
+  </div>
+</div>
