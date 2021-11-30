@@ -13,6 +13,8 @@
 
 body {
   margin: 0;
+  font-family: Arial, monospace;
+
 }
 
 // primary
@@ -66,3 +68,315 @@ body {
 .bg-secondary-dark {
   background: var(--secondary-color-dark)
 }
+
+@media screen and (min-width:550px){
+  .red{
+    background-color: crimson;
+  }
+  .lightred{
+    background-color:coral ;
+  }
+  .orange{
+    background-color: darkorange;
+  }
+  .yellow{
+    background-color: yellow;
+  }
+  .green{
+    background-color: #1ca45a;
+  }
+  .default{
+
+  }
+  .mainStructure{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+  }
+  .sidebar {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    justify-content: center;
+    top: 0; bottom:0; left:0;
+    width: 17%;
+    min-width: 130px;
+    height: 100%;
+    background-color: #d7d7de;
+    font-family: Arial,serif;
+    font-size: 80%;
+    color: aquamarine;
+
+  }
+  .none{
+    // toDo
+    // toDo
+    // toDo
+  }
+  .nav{
+    text-anchor: middle;
+    text-align: left;
+    left: 0;
+    border: 2px solid wheat;
+    font-family: Arial, monospace;
+
+  }
+  .LoginArea{
+    display: flex;
+    flex-direction: row;
+    flex-flow: row;
+    Justify-content: center;
+    min-width: fit-content;
+    list-style-type: georgian;
+    max-width: 80%;
+    border: 20px solid wheat;
+    border-radius: 10%;
+    background-color: aquamarine;
+    padding: 3%;
+  }
+  .logIn{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid blueviolet;
+    border-radius: 5%;
+    background-color: aquamarine;
+    padding: 3%;
+    font-family: Arial, monospace;
+  }
+  .body{
+    display: flex;
+    flex-direction: column;
+    flex-flow: column;
+    top: 2%;
+    left: 25%;
+    right: 5%;
+    bottom: 20%;
+    text-align: center;
+    text-anchor: middle;
+
+  }
+  .AdminSelectBottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    border: 4px chocolate;
+    padding: 6px;
+    flex-grow: 1;
+  }
+  #StudentsButton{
+
+    width: content-box;
+    height:100%;
+    font-size: medium;
+  }
+  #StuffButton{
+    width: content-box;
+    height:100%;
+    font-size: medium;
+  }
+
+  .AdminContMenu{
+    display: flex;
+    flex-direction: row ;
+    flex-basis: content-box;
+    height: 150%;
+    justify-content: space-around;
+    background-color: aquamarine;
+
+    text-anchor: middle;
+    border: 3px #28e582 ;
+
+  }
+
+  .normalText{
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 1;
+    text-align: -moz-left;
+    padding: 4px;
+  }
+  h1{
+    display: flex;
+    font-family: Arial, serif;
+    position: center;
+    font-size: 120%;
+  }
+  h2{
+    display: flex;
+    font-family: Arial, serif;
+    position: center;
+    font-size: 80%;
+  }
+  .dropdown{
+    width: fit-content;
+    border: 5px;
+
+  }
+  .footer{
+    position: absolute;
+    width: 100%; height: 20%;
+
+    justify-content: center;
+    text-align: center;
+    text-anchor: middle;
+    background-color: #d7d7de;
+    font-family: Arial, serif;
+    color: darkorange; font-size: 80%;
+    left: 0;
+    bottom :0;
+    line-height: 70%;
+  }
+  .hr2 {
+    display: flex;
+    flex-direction: column;
+    top: 5px;
+    left: 0;
+    width: 100%;
+    height: 5%;
+    margin: 0 auto;
+    color: aquamarine;
+
+    background: brown;
+  }
+  .genderChiose{
+    display: flex;
+    flex-direction: row;
+    font-size: small;
+  }
+  .actualisedList{
+    font-size: 100%;
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+@media screen and (max-width:550px) {
+  .AdminSelectBottom{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: flex-start;
+    border: 4px chocolate;
+    font-family: Arial,serif;
+    font-size: small;
+    padding: 2px;
+  }
+
+  .LoginArea {
+    display: flex;
+    flex-direction: column;
+    flex-flow: column;
+    Justify-content: center;
+    list-style-type: none;
+    border: 2px solid wheat;
+    background-color: aqua;
+    padding: 2%;
+    font-size: 70%;
+  }
+  .mainStructure{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+  }
+  .sidebar {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    background-color: #d7d7de;
+    font-family: Arial,serif;
+    font-size: 60%;
+    color: aquamarine;
+
+  }
+
+  .genderChiose{
+    display: flex;
+    flex-direction: row;
+    left: 10%;
+  }
+  #StudentsButton{
+    width:fit-content;
+    font-size: small;
+  }
+  #StuffButton{
+    width: fit-content;
+    font-size: small;
+  }
+  .logIn{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid wheat;
+    background-color: aqua;
+    font-size: 120%;
+    padding: 3%;
+    font-family: Arial,serif;
+  }
+  h1{
+    font-family: Arial, serif;
+    font-size: 100%;
+  }
+  h2{
+    font-family: Arial, serif;
+    font-size: 90%;
+  }
+  .body{
+    display: flex;
+    flex-direction: column;
+    background-color: burlywood;
+    font-size: 70%;
+    position: relative;
+  }
+  .normalText{
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 1;
+    text-align: -moz-left;
+    padding: 1px;
+  }
+  .AdminContMenu{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    text-anchor: end;
+    flex-shrink: 1;
+    font-size: 60%;
+    border: 1px #28e582 ;
+  }
+  .genderChiose{
+    display: flex;
+    flex-direction: column;
+  }
+  .footer{
+    position: absolute;
+    width: 100%; height: 20%;
+    justify-content: center;
+    text-align: center;
+    text-anchor: middle;
+    background-color: #d7d7de;
+    color: darkorange; font-size: 50%;
+    font-family: Arial,serif;
+    left: 0;
+    bottom :0px;
+    line-height: 50%;
+  }
+  .hr2 {
+    display: flex;
+    flex-direction: column;
+    top: 5px;
+    left: 0px;
+    width: 100%;
+    height: 8px;
+    margin: 0 auto;
+    color: aquamarine;
+
+    background: brown;
+  }
+  .list{
+    font-size: 70%;
+    justify-content: center;
+  }
+}
+

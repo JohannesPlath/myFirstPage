@@ -1,19 +1,17 @@
-<div class="site">
+<div class="site" >
   <nav class="site-nav flex-center bg-primary-dark">
     <div class="icon-bar">
-      <a routerLink="/login" routerLinkActive="active-link" class="bg-primary-light">Aaa</a>
-      <a routerLink="/admin-select" routerLinkActive="active-link" class="bg-primary-light">Aaa</a>
-      <a href="#" class="bg-primary-light">Bbb</a>
-      <a href="#" class="bg-primary-light">Ccc</a>
-      <a href="#" class="bg-primary-light">Ddd</a>
-      <a href="#" class="bg-primary-light">Eeee</a>
+      <div class="nav">
+      <a routerLink="/login" routerLinkActive="active-link" class="bg-primary-light">LogIn Seite</a>
+      <a routerLink="/admin-select" routerLinkActive="active-link" class="bg-primary-light">Auswahlseite</a>
+      <a routerLink="/student-control" routerLinkActive="active-link" class="bg-primary-light">Student administration</a>
+      <a routerLink="/add-student" routerLinkActive="active-link" class="bg-primary-light">add-student</a>
+      <a routerLink="/stuff-control" routerLinkActive="active-link" class="bg-primary-light">Stuff administration</a>
+      </div>
     </div>
   </nav>
   <main class="site-content bg-primary">
-    <header class="content-header flex-center bg-secondary">
-      <h1 class="section-title text-color-light">HEADER</h1>
-      <button (click)="switchColor()">Color</button>
-    </header>
+
     <section class="content-topic flex-center bg-primary">
       <!--      <h1 class="section-title text-color-light">TOPIC</h1>-->
       <router-outlet></router-outlet>

@@ -5,22 +5,10 @@ import {Component, OnInit} from '@angular/core';
   templateUrl: './main-layout.component.html',
   styleUrls: ['./main-layout.component.scss']
 })
-export class MainLayoutComponent implements OnInit {
+export class MainLayoutComponent  {
 
-  private toggle: boolean = false;
 
-  constructor() {
-  }
 
-  ngOnInit(): void {
-  }
 
-  switchColor() {
-    if (this.toggle) {
-      document.documentElement.style.setProperty('--primary-color', '#0804ee');
-    } else {
-      document.documentElement.style.setProperty('--primary-color', '#00FF00');
-    }
-    this.toggle = !this.toggle;
-  }
+
 }
