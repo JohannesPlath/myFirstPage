@@ -4,7 +4,7 @@
       <h1>Students-Managemant</h1>
     </div>
     <div class="AdminSelectBottom">
-      <div action="AdminAddStudents.html">
+      <div>
         <div class="normalText">
           <button (click)="directToAdminAddStudent()">Add:
           </button>
@@ -13,14 +13,14 @@
     </div>
     <div class="AdminSelectBottom">
       <div class="normalText">
-        <div action="none">
+        <div>
           <button (click)="directToAdminRemove()">Remove:</button>
         </div>
       </div>
     </div>
     <div class="AdminSelectBottom">
       <div class="normalText">
-        <div action="none">
+        <div>
           <button (click)="directToAdminUpdate()">Update:</button>
         </div>
       </div>
@@ -29,7 +29,7 @@
   <br>
   <div CLASS="LoginArea" style="justify-content: space-around">
     <div class="drum" style="position: center">
-      <select name="courseOptions" class="dropdown" id="SS/WS" required onchange="showSelectedList()"
+      <select name="courseOptions" class="dropdown" (change)="showSelectedSemester($event)"
               style="left: 300px">
         <option value="Summer">Select by SummerS.</option>
         <option value="Winter">Select by WinterS.</option>
@@ -38,18 +38,15 @@
     </div>
     <br>
     <div class="drum" style="position: center">
-      <select name="courseOptions" class="dropdown" id="Department" required onchange="showSelectedList()"
+      <select name="courseOptions" class="dropdown" (change)="showSelectedDepartment($event)"
               style="left: 300px">
         <option value="Maschienenbau">Maschienenbau</option>
-        <option value="IT">Informatik</option>
+        <option value="IT">Indivatik</option>
         <option value="Wirtschaftswissenschaft">Wirtschaftswissenschaft</option>
         <option value="WEB">Web Dev.</option>
       </select>
     </div>
-
-
   </div>
-
 
   <div class="list">
     <h2>actual list of students:</h2>

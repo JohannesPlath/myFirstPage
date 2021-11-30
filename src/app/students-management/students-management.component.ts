@@ -8,13 +8,15 @@ import {Router} from "@angular/router";
 })
 export class StudentsManagementComponent implements OnInit {
 
-  private students: any[] | undefined;
+  private students: any[] = [];
+  private semester: string = '';
+  private department: string = '';
 
   constructor(private router: Router) {
   }
 
   ngOnInit(): void {
-    this.requestJson()
+    this.requestJson();
   }
 
   directToAdminAddStudent() {
@@ -29,33 +31,41 @@ export class StudentsManagementComponent implements OnInit {
 
   }
 
-
-  showSelectedList() {
-    let Semester = document.getElementById("SS/WS")
-    let department = document.getElementById("Department")
-    // @ts-ignore
-    var actualList = filterListe(students, Semester.value, department.value)
+  showSelectedSemester(event: Event) {
+    this.semester = (<HTMLInputElement>event.target).value
+    const actualList = this.filterList(this.students, this.semester, this.department);
     this.showFiltered(actualList);
   }
 
+  showSelectedDepartment(event: Event) {
+    this.department = (<HTMLInputElement>event.target).value
+    const actualList = this.filterList(this.students, this.semester, this.department);
+    this.showFiltered(actualList);
+  }
 
-  filterListe(students: any[], Semester: string, department: any) {
-    if (Semester === "Summer") {
+  filterList(students: any[], semester: string, department: string) {
+    if (semester === "Summer") {
       return students.filter(function (student) {
-        var month = parseInt(student.JoiningYr.slice(5, 7))
-        return month === 4 && department == student.Department
+        const month = parseInt(student.JoiningYr.slice(5, 7));
+        if (department != '') {
+          return month === 4 && department == student.Department;
+        }
+        return month === 4;
       });
-    } else if (Semester === "Winter") {
+    } else if (semester === "Winter") {
       return students.filter(function (student) {
-        var month = parseInt(student.JoiningYr.slice(5, 7))
-        return month === 10 && department == student.Department
+        const month = parseInt(student.JoiningYr.slice(5, 7));
+        if (department != '') {
+          return month === 10 && department == student.Department;
+        }
+        return month === 10;
       });
     }
     return [];
   }
 
-
   showFiltered(students: any[]) {
+    console.log(students)
     var ul = document.getElementById("actualisedList");
     // @ts-ignore
     while (ul.firstChild) { // @ts-ignore
@@ -74,32 +84,21 @@ export class StudentsManagementComponent implements OnInit {
     return student.LastName + ", " + student.FirstName + "," + student.DOB + "," + student.Department + "," + student.JoiningYr;
   }
 
-
-  /*
-  function loadJSON(" ./students.json", function(text){
-      var data = JSON.parse(text);
-      console.log(data);
-  });*/
-
   filterDepartment(students: any[], department: String) {
     return students.filter(function (student) {
       return student.department === department
     });
   }
 
-
   requestJson() {
     const xhttp = new XMLHttpRequest()
     var self = this;
     xhttp.onreadystatechange = function () {
       if (this.readyState === 4 && this.status === 200) {
-        console.log(xhttp.responseText)
         self.students = JSON.parse(xhttp.responseText);
       }
     };
     xhttp.open('GET', 'http://localhost:4200/assets/Students.json', true);
     xhttp.send();
   }
-
-
 }

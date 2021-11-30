@@ -1,7 +1,8 @@
 <div class="LoginArea" style="left: 20%">
   <div class="logIn">
 
-    <form name="LogIn4" id="newAccount" action="studentsWorkPage.html" onsubmit="return newAccount()" method="post">
+    <form [formGroup]="newAccountnForm" id="newAccount" action="studentsWorkPage.html" novalidate
+          (ngSubmit)=" newAccount()" method="post">
       <h1>Daten eingeben:</h1> <br><br>
       <div class="normalText">
         <label for="famNameL">Nachname:</label>
