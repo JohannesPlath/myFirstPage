@@ -5,12 +5,14 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {LoginComponent} from './login/login.component';
 import {MainLayoutComponent} from './main-layout/main-layout.component';
+import { AdminSelectPageComponent } from './admin-select-page/admin-select-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    MainLayoutComponent
+    MainLayoutComponent,
+    AdminSelectPageComponent
   ],
   imports: [
     BrowserModule,

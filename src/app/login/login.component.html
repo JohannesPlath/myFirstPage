@@ -1,0 +1,43 @@
+<div class="LoginArea" style="left: 20%">
+  <div class="logIn">
+
+    <form name="LogIn2" id="logInStyleAdmin" action="AdminSelectPage.html" onsubmit="return logInCheckAdmin()" method="post"  >
+      <h1>LogIn as Admin:</h1> <br><br>
+      <div class="normalText">
+        <label for="famNameA" label.disabel="false">Nachname:</label>
+        <input autocomplete="off" type="text" name="famNameA" id="famNameA" ><br>
+        <label for="surNameA">Vorname: </label>
+        <input autocomplete="off" type="text" name="surNameA" id="surNameA"><br>
+        <label for="passWordA">Passwort: </label>
+        <input autocomplete="off" type="password" name="passWordA" id="passWordA" ><br>
+        <button id="btnSubmit" button.disabled="false" type="submit" value="Submit" onclick="">Submit</button>
+
+
+      </div>
+
+    </form>
+  </div>
+
+  <div class="logIn">
+    <form name="LogIn3" id="logInStyleSudent" action="studentsWorkPage.html" onsubmit="return logInCheckStudent()" method="post">
+      <h1>LogIn as Staff:</h1> <br><br>
+      <div class="normalText">
+        <label for="famNameS">Nachname:</label>
+        <input autocomplete="off" type="text" name="famNameS" id="famNameS" ><br>
+        <label for="surNameS">Vorname:</label>
+        <input autocomplete="off" type="text" name="surNameS" id="surNameS"><br>
+        <label for="passWordS">Passwort:</label>
+        <input autocomplete="off" type="password" name="passWordS" id="passWordS" ><br>
+
+        <button id="btnSubmitStuff"  type="submit" value="Submit" onclick="">Submit</button>
+      </div>
+    </form>
+
+  </div>
+
+</div>
+<div class="LoginArea">
+  <form action="newAccount.html" class="newAccount" style="left: 45%">
+    <button id="newAccount" type="submit" value="submit">New Account</button>
+  </form>
+</div>
