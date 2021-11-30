@@ -13,6 +13,7 @@ export class StuffManagementComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.requestJson();
   }
 
   requestJson() {

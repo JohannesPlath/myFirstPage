@@ -11,7 +11,7 @@ import {ReactiveFormsModule} from "@angular/forms";
 import {StudentWorkComponent} from './student-work/student-work.component';
 import {StuffManagementComponent} from './stuff-management/stuff-management.component';
 import {AdminAddStdentComponent} from './admin-add-student/admin-add-stdent.component';
-import {DiclaimerComponent} from './diclaimer/diclaimer.component';
+import {DiclaimerComponent} from './disclaimer/diclaimer.component';
 import {NewAccountComponent} from './new-account/new-account.component';
 
 @NgModule({
