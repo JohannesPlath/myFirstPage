@@ -1,15 +1,22 @@
 // # PAGE STRUCTURE
-.site {
-  display: flex;
-  min-height: 100vh;
-}
+
+@media screen and (min-width:550px){
 .mainStructure{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-around;
   text-align: center;
+  min-height: 100vh;
 }
-
+}
+@media screen and (max-width:550px) {
+  .mainStructure{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+  }
+}
 .site-nav {
   width: 120px;
 }
