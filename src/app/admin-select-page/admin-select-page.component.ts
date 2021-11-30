@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-admin-select-page',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminSelectPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) {
+
+  }
 
   ngOnInit(): void {
   }
 
+  directToSutdent_management() {
+    this.router.navigate(['/student-management']);
+  }
+
+  directToStuff_management() {
+    this.router.navigate(['/stuff-management']);
+  }
 }

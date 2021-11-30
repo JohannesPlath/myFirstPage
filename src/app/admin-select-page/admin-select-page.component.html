@@ -1,17 +1,16 @@
-<div class="body" >
+<div class="body">
   <div class="LoginArea">
-    <form class="AdminSelectBottom">
+    <div class="AdminSelectBottom">
       <h1>where you wanna go?:</h1><br>
-    </form>
-    <form class="AdminSelectBottom" action="StudentCom.html">
-      <div class="normalText">
-        <button id="StudentsButton" type="submit"  >Students</button>
-      </div>
-    </form>
-    <form class="AdminSelectBottom" action="StuffCom.html">
-      <div class="normalText">
-        <button id="StuffButton" type="submit" value="Submit">Stuff</button>
-      </div>
-    </form>
+    </div>
+
+    <div class="normalText AdminSelectBottom">
+      <button id="StudentsButton" (click)="directToSutdent_management()">Students</button>
+    </div>
+    <div class="normalText AdminSelectBottom">
+      <button id="StuffButton" (click)="directToStuff_management()">Stuff</button>
+      
+
+    </div>
   </div>
 </div>
