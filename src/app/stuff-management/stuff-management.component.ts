@@ -29,16 +29,20 @@ export class StuffManagementComponent implements OnInit {
     var stuffList = this.requestJson();
     console.log(stuffList)
     //var actualList = filterListe(sStuffList,  department.value)
+    // @ts-ignore
     this.showFiltered(stuffList);
   }
 
   showFiltered(stuffList: any[]) {
     var ul = document.getElementById("actualStuffList");
-    while (ul.firstChild)
+    // @ts-ignore
+    while (ul.firstChild) { // @ts-ignore
       ul.removeChild(ul.firstChild);
+    }
     for (let i = 0; i < stuffList.length; i++) {  // toDo .length knallt ... Uncaught TypeError: Cannot read properties of undendefined (reading 'length')
       var li = document.createElement("li");
       li.appendChild(document.createTextNode(this.completetEntry(stuffList[i])));
+      // @ts-ignore
       ul.appendChild(li);
     }
   }

@@ -1,8 +1,7 @@
 <div class="LoginArea" style="left: 20%">
   <div class="logIn">
 
-    <form [formGroup]="newAccountnForm" id="newAccount" action="studentsWorkPage.html" novalidate
-          (ngSubmit)=" newAccount()" method="post">
+    <form [formGroup]="newAccountnForm" novalidate (ngSubmit)="newAccount()" method="post">
       <h1>Daten eingeben:</h1> <br><br>
       <div class="normalText">
         <label for="famNameL">Nachname:</label>
@@ -11,14 +10,15 @@
         <input autocomplete="off" type="text" name="surNameL" id="surNameL"><br>
 
         <label for="passWordL">Passwort: </label>
-        <input autocomplete="off" onkeydown="colorCheck()" class="default" type="password" name="passWordL"
+        <input autocomplete="off" (keyup)="colorCheck()" class="default" type="password" name="passWordL"
                TITLE="1 of each: 0-9, A-Z, a-z, !@'$%^&*" id="passWordL"><br>
 
         <label for="ConfpassWordL">Confirm Passwort: </label>
         <input autocomplete="off" type="password" name="ConfpassWordL" id="ConfpassWordL"><br>
 
       </div>
-      <button id="btnSubmitL" button.disabled="false" type="submit" value="Submit" onclick="">Submit</button>
+      <button buttom.disabled="false" type="submit" value="Submit" onclick="">Submit</button>
+
 
     </form>
   </div>

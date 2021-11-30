@@ -1,1 +1,42 @@
-<p>admin-add-stdent works!</p>
+<div class="LoginArea">
+  <div class="logIn">
+    <h1>Admin Add Students</h1>
+    <h2> add Students...</h2>
+  </div>
+</div>
+<div class="LoginArea">
+  <div class="logIn">
+    <form name="AddStuff" id="addStuff" action="StudentCom.html" onsubmit="return addStudent()" method="post">
+      <div class="normalText">
+        <label for="Sudent_Id">Student_Id</label>
+        <input type="text" name="Stuff_Id" id="Sudent_Id"> <br>
+        <label for="First_Name">First_Name</label>
+        <input type="text" name="First_Name" id="First_Name"> <br>
+        <label for="Last_Name">Last_Name</label>
+        <input type="text" name="Last_Name" id="Last_Name"> <br>
+        <div class="genderChiose">
+          <input type="radio" name="female" value="female"> female<br>
+          <input type="radio" name="male" value="male"> male<br>
+          <input type="radio" name="deverse" value="deverse"> deverse <br>
+          <input type="radio" name="unknown" value="unknown"> unknown<br>
+        </div>
+
+        <label for="DOB">DOB</label>
+        <input type="date" name="Day of Birth" id="DOB"> <br>
+        <label for="DOB">DoY</label>
+        <input type="date" name="Day join" id="DoY"> <br>
+        <label for="Department">Department</label>
+
+        <select name="courseOptions" class="dropdown" id="Department" required onchange="showSelectedList() ">
+          <option value="Maschienenbau">Maschienenbau</option>
+          <option value="Informatik">Informatik</option>
+          <option value="Wirtschaftswissenschaft">Wirtschaftswissenschaft</option>
+          <option value="Web_Dev.">Web Dev.</option>
+        </select>
+        <label for="Mail">Mail</label>
+        <input type="email" name="Mail" id="Mail"> <br>
+      </div>
+      <button id="btnSubmit" button.disabled="false" type="submit" value="Submit" onclick="">Submit</button>
+    </form>
+  </div>
+</div>

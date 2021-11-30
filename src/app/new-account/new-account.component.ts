@@ -175,19 +175,19 @@ export class NewAccountComponent implements OnInit {
   setBackroundcolor(level: Number) {
 
     if (level === 1) {
-      document.getElementById("passWordL").setAttribute('class', 'red')
+      this.newAccountnForm.controls["passWordL"].setValue('class', 'red')
     }
     if (level === 2) {
-      document.getElementById("passWordL").setAttribute('class', 'lightred')
+      this.newAccountnForm.controls["passWordL"].setValue('class', 'lightred')
     }
     if (level === 3) {
-      document.getElementById("passWordL").setAttribute('class', 'orange')
+      this.newAccountnForm.controls["passWordL"].setValue('class', 'orange')
     }
     if (level === 4) {
-      document.getElementById("passWordL").setAttribute('class', 'yellow')
+      this.newAccountnForm.controls["passWordL"].setValue('class', 'yellow')
     }
     if (level === 5) {
-      document.getElementById("passWordL").setAttribute('class', 'green')
+      this.newAccountnForm.controls["passWordL"].setValue('class', 'green')
     }
 
 
