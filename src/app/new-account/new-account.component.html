@@ -1,25 +1,23 @@
-<div class="LoginArea" style="left: 20%">
+<div class="LoginArea">
   <div class="logIn">
 
-    <form [formGroup]="newAccountnForm" novalidate (ngSubmit)="newAccount()" method="post">
+    <form [formGroup]="newAccountForm" novalidate (ngSubmit)="newAccount()" method="post">
       <h1>Daten eingeben:</h1> <br><br>
       <div class="normalText">
         <label for="famNameL">Nachname:</label>
-        <input autocomplete="off" type="text" name="famNameL" id="famNameL"><br>
-        <label for="surNameL">Vorname: </label>
-        <input autocomplete="off" type="text" name="surNameL" id="surNameL"><br>
+        <input formControlName="famNameL" autocomplete="off" type="text" id="famNameL"><br>
 
-        <label for="passWordL">Passwort: </label>
-        <input autocomplete="off" (keyup)="colorCheck()" class="default" type="password" name="passWordL"
+        <label for="surNameL">Vorname:</label>
+        <input formControlName="surNameL" autocomplete="off" type="text" id="surNameL"><br>
+
+        <label for="passWordL">Passwort:</label>
+        <input formControlName="passWordL" autocomplete="off" (input)="colorCheck()" class="default" type="password"
                TITLE="1 of each: 0-9, A-Z, a-z, !@'$%^&*" id="passWordL"><br>
 
-        <label for="ConfpassWordL">Confirm Passwort: </label>
-        <input autocomplete="off" type="password" name="ConfpassWordL" id="ConfpassWordL"><br>
-
+        <label for="confpassWordL">Confirm Passwort:</label>
+        <input formControlName="confpassWordL" autocomplete="off" type="password" id="confpassWordL"><br>
       </div>
-      <button buttom.disabled="false" type="submit" value="Submit" onclick="">Submit</button>
-
-
+      <button id="btnSubmitL" type="submit" value="Submit" onclick="">Submit</button>
     </form>
   </div>
 </div>

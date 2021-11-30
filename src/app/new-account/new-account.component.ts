@@ -11,12 +11,12 @@ export class NewAccountComponent implements OnInit {
 
   private passWordL = null;
 
-  newAccountnForm = this.fb.group({
+  newAccountForm = this.fb.group({
     surNameL: [null, Validators.required],
     famNameL: [null, Validators.required],
     passWordL: [null, Validators.required],
+    confpassWordL: [null, Validators.required],
   });
-
 
   constructor(private fb: FormBuilder, private router: Router) {
   }
@@ -24,12 +24,11 @@ export class NewAccountComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
   colorCheck() {
     let securityLevelPassw = 1;
 
-    let passWordL = this.newAccountnForm.controls["passWordL"].value;
-    let ConfpassWordS = this.newAccountnForm.controls["ConfpassWordL"].value;
+    let passWordL = this.newAccountForm.controls["passWordL"].value;
+    let ConfpassWordS = this.newAccountForm.controls["confpassWordL"].value;
 
     let mustHaveSpeciealSign = /[! @'$%^&*]/;
     let countOfSpecialSign = passWordL.search(mustHaveSpeciealSign);
@@ -42,26 +41,26 @@ export class NewAccountComponent implements OnInit {
     let countOfLowerCase = passWordL.search(mustHaveLowCase);
     let countOfNumber = passWordL.search(mustHaveNumber);
 
-    this.setBackroundcolor(securityLevelPassw);
+    this.setBackgroundColor(securityLevelPassw);
 
     if ((countOfSpecialSign > 0)) {
       securityLevelPassw++;
-      this.setBackroundcolor(securityLevelPassw);
+      this.setBackgroundColor(securityLevelPassw);
     }
     if ((countOfSpecialSign <= 0)) {
 
     }
     if ((countOfLowerCase >= 0)) {
       securityLevelPassw++;
-      this.setBackroundcolor(securityLevelPassw);
+      this.setBackgroundColor(securityLevelPassw);
     }
     if ((countOfUpperCase >= 0)) {
       securityLevelPassw++;
-      this.setBackroundcolor(securityLevelPassw);
+      this.setBackgroundColor(securityLevelPassw);
     }
     if ((countOfNumber >= 0)) {
       securityLevelPassw++;
-      this.setBackroundcolor(securityLevelPassw);
+      this.setBackgroundColor(securityLevelPassw);
     }
     if ((countOfLowerCase < 0)) {
 
@@ -75,7 +74,7 @@ export class NewAccountComponent implements OnInit {
     }
     if ((passWordL.length >= 8)) {
       securityLevelPassw++;
-      this.setBackroundcolor(securityLevelPassw);
+      this.setBackgroundColor(securityLevelPassw);
     }
     if (((passWordL.length < 8))) {
     }
@@ -84,20 +83,18 @@ export class NewAccountComponent implements OnInit {
       return false;
     }
     if (securityLevelPassw < 5) {
-      this.setBackroundcolor(securityLevelPassw);
+      this.setBackgroundColor(securityLevelPassw);
       return false;
     }
     return true
   }
 
-
-  newAccount() {
-
+  newAccount(): boolean {
     let securityLevelPassw = 0;
-    let famNameL = this.newAccountnForm.controls["famNameL"].value;
-    let surNameL = this.newAccountnForm.controls["surNameL"].value;
-    let passWordL = this.newAccountnForm.controls["passWordL"].value;
-    let ConfpassWordS = this.newAccountnForm.controls["ConfpassWordL"].value;
+    let famNameL = this.newAccountForm.controls["famNameL"].value;
+    let surNameL = this.newAccountForm.controls["surNameL"].value;
+    let passWordL = this.newAccountForm.controls["passWordL"].value;
+    let confpassWordS = this.newAccountForm.controls["confpassWordL"].value;
 
     let mustHaveSpeciealSign = /[! @'$%^&*]/;
     let countOfSpecialSign = passWordL.search(mustHaveSpeciealSign);
@@ -110,7 +107,7 @@ export class NewAccountComponent implements OnInit {
     let countOfLowerCase = passWordL.search(mustHaveLowCase);
     let countOfNumber = passWordL.search(mustHaveNumber);
 
-    this.setBackroundcolor(securityLevelPassw);
+    this.setBackgroundColor(securityLevelPassw);
 
     if (famNameL == null || famNameL === "") {
       alert("Irgendwas muss da schon rein...!\n noch: ");
@@ -122,22 +119,22 @@ export class NewAccountComponent implements OnInit {
     }
     if ((countOfSpecialSign > 0)) {
       securityLevelPassw++;
-      this.setBackroundcolor(securityLevelPassw);
+      this.setBackgroundColor(securityLevelPassw);
     }
     if ((countOfSpecialSign <= 0)) {
       alert(" minimum 1 of : ! @ ' $ % ^ & *")
     }
     if ((countOfLowerCase >= 0)) {
       securityLevelPassw++;
-      this.setBackroundcolor(securityLevelPassw);
+      this.setBackgroundColor(securityLevelPassw);
     }
     if ((countOfUpperCase >= 0)) {
       securityLevelPassw++;
-      this.setBackroundcolor(securityLevelPassw);
+      this.setBackgroundColor(securityLevelPassw);
     }
     if ((countOfNumber >= 0)) {
       securityLevelPassw++;
-      this.setBackroundcolor(securityLevelPassw);
+      this.setBackgroundColor(securityLevelPassw);
     }
     if ((countOfLowerCase < 0)) {
       alert(" minimum a lowercase letter");
@@ -153,44 +150,46 @@ export class NewAccountComponent implements OnInit {
     }
     if ((passWordL.length >= 8)) {
       securityLevelPassw++;
-      this.setBackroundcolor(securityLevelPassw);
+      this.setBackgroundColor(securityLevelPassw);
     }
     if (((passWordL.length < 8))) {
       alert(" minimum count of Character: 8 !");
     }
 
-    if (passWordL !== ConfpassWordS) {
+    if (passWordL !== confpassWordS) {
       alert("password not eqaul!");
       return false;
     }
     if (securityLevelPassw < 5) {
-      this.setBackroundcolor(securityLevelPassw);
+      this.setBackgroundColor(securityLevelPassw);
       return false;
     }
     this.router.navigate(['/student-work']);
     return true;
-
   }
 
-  setBackroundcolor(level: Number) {
-
+  setBackgroundColor(level: Number) {
+    let element = document.getElementById("passWordL");
     if (level === 1) {
-      this.newAccountnForm.controls["passWordL"].setValue('class', 'red')
+      // @ts-ignore
+      element.setAttribute('class', 'red')
     }
     if (level === 2) {
-      this.newAccountnForm.controls["passWordL"].setValue('class', 'lightred')
+      // @ts-ignore
+      element.setAttribute('class', 'lightred')
     }
     if (level === 3) {
-      this.newAccountnForm.controls["passWordL"].setValue('class', 'orange')
+      // @ts-ignore
+      element.setAttribute('class', 'orange')
     }
     if (level === 4) {
-      this.newAccountnForm.controls["passWordL"].setValue('class', 'yellow')
+      // @ts-ignore
+      element.setAttribute('class', 'yellow')
     }
     if (level === 5) {
-      this.newAccountnForm.controls["passWordL"].setValue('class', 'green')
+      // @ts-ignore
+      element.setAttribute('class', 'green')
     }
-
-
   }
 
 }

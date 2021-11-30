@@ -6,7 +6,7 @@
 </div>
 <div class="LoginArea">
   <div class="logIn">
-    <form name="AddStuff" id="addStuff" action="StudentCom.html" onsubmit="return addStudent()" method="post">
+    <form [formGroup]="addStudentForm" novalidate (ngSubmit)="addStudent()" method="post">
       <div class="normalText">
         <label for="Sudent_Id">Student_Id</label>
         <input type="text" name="Stuff_Id" id="Sudent_Id"> <br>

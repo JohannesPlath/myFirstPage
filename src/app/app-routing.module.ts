@@ -6,7 +6,7 @@ import {AdminSelectPageComponent} from "./admin-select-page/admin-select-page.co
 import {StudentsManagementComponent} from "./students-management/students-management.component";
 import {StudentWorkComponent} from "./student-work/student-work.component";
 import {StuffManagementComponent} from "./stuff-management/stuff-management.component";
-import {AdminAddStdentComponent} from "./admin-add-stdent/admin-add-stdent.component";
+import {AdminAddStdentComponent} from "./admin-add-student/admin-add-stdent.component";
 import {DiclaimerComponent} from "./diclaimer/diclaimer.component";
 import {NewAccountComponent} from "./new-account/new-account.component";
 

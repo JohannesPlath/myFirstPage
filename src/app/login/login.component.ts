@@ -23,6 +23,7 @@ export class LoginComponent implements OnInit {
     famNameS: [null, Validators.required],
     passWordS: [null, Validators.required]
   });
+  newAccount: any;
 
   constructor(private fb: FormBuilder,
               private router: Router) {
@@ -99,5 +100,9 @@ export class LoginComponent implements OnInit {
     }
     this.router.navigate(['/student-work']);
     return true;
+  }
+
+  directToNewAccount() {
+    this.router.navigate(['/new-account']);
   }
 }
