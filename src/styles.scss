@@ -120,8 +120,8 @@ body {
     left: 0;
     border: 2px solid wheat;
     font-family: Arial, monospace;
-
   }
+
   .LoginArea{
     display: flex;
     flex-direction: row;
@@ -261,6 +261,15 @@ body {
     font-family: Arial,serif;
     font-size: small;
     padding: 2px;
+  }
+  .nav{
+    text-anchor: middle;
+    text-align: left;
+    left: 0;
+    border: 2px solid wheat;
+    font-family: Arial, monospace;
+    font-size: 70%;
+
   }
 
   .LoginArea {

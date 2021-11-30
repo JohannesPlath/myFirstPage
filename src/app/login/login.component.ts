@@ -14,7 +14,14 @@ export class LoginComponent implements OnInit {
   adminForm = this.fb.group({
     surNameA: [null, Validators.required],
     famNameA: [null, Validators.required],
-    passWordA: [null, Validators.required]
+    passWordA: [null, Validators.required],
+
+  });
+  studentForm = this.fb.group({
+
+    surNameS: [null, Validators.required],
+    famNameS: [null, Validators.required],
+    passWordS: [null, Validators.required]
   });
 
   constructor(private fb: FormBuilder,
@@ -61,17 +68,14 @@ export class LoginComponent implements OnInit {
   }
 
   logInCheckStudent(): boolean {
-    // @ts-ignore
-    var famNameS = document.forms["LogIn3"]["famNameS"].value;
-    // @ts-ignore
-    var surNameS = document.forms["LogIn3"]["surNameS"].value;
-    // @ts-ignore
-    var passWordS = document.forms["LogIn3"]["passWordS"].value;
+    var famNameS = this.studentForm.controls["famNameS"].value;
+    var surNameS = this.studentForm.controls["surNameS"].value;
+    var passWordS = this.studentForm.controls["passWordS"].value;
 
     this.counter2--;
     if (this.counter2 <= 0) {
       // @ts-ignore
-      document.getElementById("btnSubmit").disabled = true;
+      document.getElementById("btnSubmitStuff").disabled = true;
       alert("zu oft falsch")
       return false;
     } else if (famNameS == null || famNameS === "") {
@@ -93,7 +97,7 @@ export class LoginComponent implements OnInit {
       alert("‘Login Credentials Incorrect\n noch: " + this.counter2 + " Versuche");
       return false;
     }
-    window.location.href = "studentsWorkPage.html"
+    this.router.navigate(['/student-work']);
     return true;
   }
 }

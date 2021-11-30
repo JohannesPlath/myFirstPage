@@ -7,6 +7,7 @@
   justify-content: space-around;
   text-align: center;
   min-height: 100vh;
+  font-size: 100%;
 }
 }
 @media screen and (max-width:550px) {
@@ -15,16 +16,18 @@
     flex-direction: column;
     justify-content: space-around;
     text-align: center;
+    font-size: 80%;
   }
 }
-.site-nav {
+/*.site-nav {
   width: 120px;
-}
+}*/
 
 .site-content {
   flex: 1;
   display: flex;
   flex-direction: column;
+
 }
 
 

@@ -1,4 +1,4 @@
-<div class="site">
+<div class="mainStructure" >
   <nav class="site-nav flex-center bg-primary-dark">
     <div class="icon-bar">
       <div class="nav">
@@ -7,6 +7,7 @@
       <a routerLink="/student-control" routerLinkActive="active-link" class="bg-primary-light">Student administration</a>
       <a routerLink="/add-student" routerLinkActive="active-link" class="bg-primary-light">add-student</a>
       <a routerLink="/stuff-control" routerLinkActive="active-link" class="bg-primary-light">Stuff administration</a>
+      <a routerLink="/student-work" routerLinkActive="active-link" class="bg-primary-light">Studenten WorkPage</a>
       </div>
     </div>
   </nav>
@@ -16,8 +17,12 @@
       <!--      <h1 class="section-title text-color-light">TOPIC</h1>-->
       <router-outlet></router-outlet>
     </section>
+
     <footer class="bg-primary-dark">
-      <a class="text-color-light">footer: fixed height</a>
+
+      <p>Author: Yo Jo</p>
+      <p><a  style="color: chocolate">plath.johannes@gmail.com</a></p>
+
     </footer>
   </main>
 </div>

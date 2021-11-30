@@ -1,8 +1,7 @@
 <div class="LoginArea" style="left: 20%">
   <div class="logIn">
-
     <form [formGroup]="adminForm" novalidate (ngSubmit)="logInCheckAdmin()">
-      <h1>LogIn as Admin:</h1> <br><br>
+      <h1>LogIn as Admin:</h1> <br>
       <div class="normalText">
         <label for="famNameA" label.disabel="false">Nachname:</label>
         <input formControlName="famNameA" autocomplete="off" type="text" name="famNameA" id="famNameA"><br>
@@ -12,23 +11,20 @@
         <input formControlName="passWordA" autocomplete="off" type="password" name="passWordA" id="passWordA"><br>
         <button id="btnSubmit" button.disabled="false" type="submit" value="Submit" onclick="">Submit</button>
       </div>
-
     </form>
   </div>
 
   <div class="logIn">
-    <form name="LogIn3" id="logInStyleSudent" action="studentsWorkPage.html" onsubmit="return logInCheckStudent()"
-          method="post">
-      <h1>LogIn as Staff:</h1> <br><br>
+    <form [formGroup]="studentForm" novalidate (ngSubmit)="logInCheckStudent()">
+      <h1>LogIn as Staff:</h1> <br>
       <div class="normalText">
         <label for="famNameS">Nachname:</label>
-        <input autocomplete="off" type="text" name="famNameS" id="famNameS"><br>
+        <input formControlName="famNameS" autocomplete="off" type="text" name="famNameS" id="famNameS"><br>
         <label for="surNameS">Vorname:</label>
-        <input autocomplete="off" type="text" name="surNameS" id="surNameS"><br>
+        <input formControlName="surNameS" autocomplete="off" type="text" name="surNameS" id="surNameS"><br>
         <label for="passWordS">Passwort:</label>
-        <input autocomplete="off" type="password" name="passWordS" id="passWordS"><br>
-
-        <button id="btnSubmitStuff" type="submit" value="Submit" onclick="">Submit</button>
+        <input formControlName="passWordS" autocomplete="off" type="password" name="passWordS" id="passWordS"><br>
+        <button id="btnSubmitStuff" button.disabled="false" type="submit" value="Submit" onclick="">Submit</button>
       </div>
     </form>
 
