@@ -14,11 +14,15 @@ export class AdminAddStdentComponent implements OnInit {
     student_Id: [null, Validators.required],
     First_Name: [null, Validators.required],
     Last_Name: [null, Validators.required],
-    temp_DOB: [null, Validators.required],
-    tempDOY: [null, Validators.required],
+    DOB: [null, Validators.required],
+    DOY: [null, Validators.required],
     Department: [null, Validators.required],
     Mail: [null, Validators.required],
-
+    female: [null, Validators.required],
+    male: [null, Validators.required],
+    deverse: [null, Validators.required],
+    unknown: [null, Validators.required],
+    courseOptions: [null, Validators.required],
   });
 
   constructor(private fb: FormBuilder, private router: Router) {
@@ -28,12 +32,12 @@ export class AdminAddStdentComponent implements OnInit {
   }
 
   addStudent() {
-    let student_Id = this.addStudentForm.controls["Sudent_Id"].value;
+    let student_Id = this.addStudentForm.controls["student_Id"].value;
     let First_Name = this.addStudentForm.controls["First_Name"].value;
     let Last_Name = this.addStudentForm.controls["Last_Name"].value;
     let temp_DOB = this.addStudentForm.controls["DOB"].value;
     let DOB = new Date(temp_DOB.slice(0, 4), temp_DOB.slice(5, 7) - 1, temp_DOB.slice(8, 10));
-    let tempDOY = this.addStudentForm.controls["DoY"].value;
+    let tempDOY = this.addStudentForm.controls["DOY"].value;
     let DOY = new Date(tempDOY.slice(0, 4), tempDOY.slice(5, 7) - 1, tempDOY.slice(8, 10));
     let Department = this.addStudentForm.controls["Department"].value;
     let Mail = this.addStudentForm.controls["Mail"].value;
