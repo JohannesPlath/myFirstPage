@@ -1,0 +1,24 @@
+<div class="LoginArea" style="left: 20%">
+  <div class="logIn">
+
+    <form name="LogIn4" id="newAccount" action="studentsWorkPage.html" onsubmit="return newAccount()" method="post">
+      <h1>Daten eingeben:</h1> <br><br>
+      <div class="normalText">
+        <label for="famNameL">Nachname:</label>
+        <input autocomplete="off" type="text" name="famNameL" id="famNameL"><br>
+        <label for="surNameL">Vorname: </label>
+        <input autocomplete="off" type="text" name="surNameL" id="surNameL"><br>
+
+        <label for="passWordL">Passwort: </label>
+        <input autocomplete="off" onkeydown="colorCheck()" class="default" type="password" name="passWordL"
+               TITLE="1 of each: 0-9, A-Z, a-z, !@'$%^&*" id="passWordL"><br>
+
+        <label for="ConfpassWordL">Confirm Passwort: </label>
+        <input autocomplete="off" type="password" name="ConfpassWordL" id="ConfpassWordL"><br>
+
+      </div>
+      <button id="btnSubmitL" button.disabled="false" type="submit" value="Submit" onclick="">Submit</button>
+
+    </form>
+  </div>
+</div>

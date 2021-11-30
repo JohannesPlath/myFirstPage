@@ -7,6 +7,8 @@ import {StudentsManagementComponent} from "./students-management/students-manage
 import {StudentWorkComponent} from "./student-work/student-work.component";
 import {StuffManagementComponent} from "./stuff-management/stuff-management.component";
 import {AdminAddStdentComponent} from "./admin-add-stdent/admin-add-stdent.component";
+import {DiclaimerComponent} from "./diclaimer/diclaimer.component";
+import {NewAccountComponent} from "./new-account/new-account.component";
 
 const routes: Routes = [{
   path: '', component: MainLayoutComponent, children: [
@@ -15,6 +17,8 @@ const routes: Routes = [{
     {path: 'student-work', component: StudentWorkComponent},
     {path: 'student-management', component: StudentsManagementComponent},
     {path: 'stuff-management', component: StuffManagementComponent},
+    {path: 'new-account', component: NewAccountComponent},
+    {path: 'disclaimer', component: DiclaimerComponent},
     {path: 'adminAddStudent', component: AdminAddStdentComponent}
 
   ]

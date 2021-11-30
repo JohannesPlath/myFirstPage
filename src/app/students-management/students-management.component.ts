@@ -14,6 +14,7 @@ export class StudentsManagementComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.requestJson()
   }
 
   directToAdminAddStudent() {
@@ -96,7 +97,7 @@ export class StudentsManagementComponent implements OnInit {
         self.students = JSON.parse(xhttp.responseText);
       }
     };
-    xhttp.open('GET', 'https://localhost:4200/assets/student.json', true);
+    xhttp.open('GET', 'http://localhost:4200/assets/Students.json', true);
     xhttp.send();
   }
 

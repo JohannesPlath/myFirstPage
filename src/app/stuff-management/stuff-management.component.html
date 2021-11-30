@@ -1,1 +1,46 @@
-<p>stuff-management works!</p>
+<div class="body">
+  <div class="LoginArea">
+    <form class="AdminAdminConSelectBottom">
+      <h1>Stuffmanagement</h1>
+      <br>
+    </form>
+    <div class="AdminSelectBottom">
+      <form action="AdminAddStuff.html">
+        <div class="normalText">
+          <button id="AddStuffBotton" type="submit">Add:</button>
+        </div>
+      </form>
+    </div>
+    <div class="AdminSelectBottom">
+      <div class="normalText">
+        <form action="none">
+          <button id="UpdateStuffButton" type="submit">Remove:</button>
+        </form>
+      </div>
+    </div>
+    <div class="AdminSelectBottom">
+      <div class="normalText">
+        <form action="none">
+          <button id="RemoveStuffButton" type="submit">Update:</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="drum" style="position: center">
+    <select name="courseOptions" class="dropdown" id="Department" required onchange="showSelectedList()"
+            style="left: 300px">
+      <option value="Maschienenbau">Maschienenbau</option>
+      <option value="Informatik">Informatik</option>
+      <option value="Wirtschaftswissenschaft">Wirtschaftswissenschaft</option>
+      <option value="Web_Dev.">Web Dev.</option>
+    </select>
+  </div>
+  <div class="liste">
+    <h2>actual list of Students</h2>
+
+    <ul id="actualStuffList">
+
+    </ul>
+  </div>
+</div>
