@@ -54,6 +54,7 @@ export class LoginComponent implements OnInit {
       alert("‘Login Credentials Incorrect\n noch: " + this.counter + " Versuche");
       return false;
     }
+    // this.router.navigate(['/admin-select']);
     return true;
   }
 
