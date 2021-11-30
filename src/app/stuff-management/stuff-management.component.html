@@ -28,7 +28,7 @@
   </div>
   <br>
   <div class="drum" style="position: center">
-    <select name="courseOptions" class="dropdown" id="Department" required onchange="showSelectedList()"
+    <select name="courseOptions" class="dropdown" id="Department" required (change)="showSelectedList()"
             style="left: 300px">
       <option value="Maschienenbau">Maschienenbau</option>
       <option value="Informatik">Informatik</option>

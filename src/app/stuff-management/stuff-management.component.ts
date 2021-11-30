@@ -14,6 +14,7 @@ export class StuffManagementComponent implements OnInit {
 
   ngOnInit(): void {
     this.requestJson();
+
   }
 
   requestJson() {
@@ -22,6 +23,7 @@ export class StuffManagementComponent implements OnInit {
     xhr.onreadystatechange = function () {
       if (this.readyState === 4 && this.status === 200) {
         self.stuff = JSON.parse(xhr.responseText);
+        console.log(self.stuff)
       }
     };
     xhr.open('GET', 'https://jsonplaceholder.typicode.com/users', true);
