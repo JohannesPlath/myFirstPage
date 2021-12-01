@@ -1,4 +1,4 @@
-<div class="LoginArea" style="left: 20%">
+<div class="LoginArea">
   <div class="logIn">
     <form [formGroup]="adminForm" novalidate (ngSubmit)="logInCheckAdmin()">
       <h1>LogIn as Admin:</h1> <br>
@@ -31,7 +31,10 @@
   </div>
 
 </div>
-<div class="LoginArea">
 
-  <button (click)="directToNewAccount()">New Account</button>
+<div class="mainStructure">
+  <div class="LoginIn ">
+    <button (click)="directToNewAccount()">New Account</button>
+  </div>
+
 </div>
