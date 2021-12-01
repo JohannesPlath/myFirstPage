@@ -44,7 +44,7 @@ export class StuffManagementComponent implements OnInit {
     while (ul.firstChild) {
       ul.removeChild(ul.firstChild);
     }
-    for (let i = 0; i < stuffList.length; i++) {  // toDo .length knallt ... Uncaught TypeError: Cannot read properties of undendefined (reading 'length')
+    for (let i = 0; i < stuffList.length; i++) {
       const li = document.createElement("li");
       li.appendChild(document.createTextNode(this.completetEntry(stuffList[i])));
       ul.appendChild(li);
