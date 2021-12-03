@@ -18,11 +18,11 @@ export class LoginComponent implements OnInit {
 
   });
   studentForm = this.fb.group({
-
     surNameS: [null, Validators.required],
     famNameS: [null, Validators.required],
     passWordS: [null, Validators.required]
   });
+
   newAccount: any;
 
   constructor(private fb: FormBuilder,

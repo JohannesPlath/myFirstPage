@@ -1,14 +1,14 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {LoginComponent} from "./login/login.component";
-import {MainLayoutComponent} from "./main-layout/main-layout.component";
-import {AdminSelectPageComponent} from "./admin-select-page/admin-select-page.component";
-import {StudentsManagementComponent} from "./students-management/students-management.component";
-import {StudentWorkComponent} from "./student-work/student-work.component";
-import {StuffManagementComponent} from "./stuff-management/stuff-management.component";
-import {AdminAddStdentComponent} from "./admin-add-student/admin-add-stdent.component";
-import {DiclaimerComponent} from "./disclaimer/diclaimer.component";
-import {NewAccountComponent} from "./new-account/new-account.component";
+import {LoginComponent} from "./core/login/login.component";
+import {MainLayoutComponent} from "./shared/main-layout/main-layout.component";
+import {AdminSelectPageComponent} from "./core/adminManagemaent/admin-select-page/admin-select-page.component";
+import {StudentsManagementComponent} from "./core/adminManagemaent/students-management/students-management.component";
+import {StudentWorkComponent} from "./core/StudentThings/student-work/student-work.component";
+import {StuffManagementComponent} from "./core/adminManagemaent/stuff-management/stuff-management.component";
+import {AdminAddStdentComponent} from "./core/adminManagemaent/admin-add-student/admin-add-stdent.component";
+import {DiclaimerComponent} from "./core/disclaimer/diclaimer.component";
+import {NewAccountComponent} from "./core/new-account/new-account.component";
 
 const routes: Routes = [{
   path: '', component: MainLayoutComponent, children: [
