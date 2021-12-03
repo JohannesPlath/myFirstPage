@@ -23,7 +23,9 @@ export class AdminAddStdentComponent implements OnInit {
     deverse: [null, Validators.required],
     unknown: [null, Validators.required],
     courseOptions: [null, Validators.required],
+
   });
+
 
   constructor(private fb: FormBuilder, private router: Router) {
   }
@@ -60,5 +62,27 @@ export class AdminAddStdentComponent implements OnInit {
     }
     // toDo generate new entry
     return true;
+  }
+
+  min: any;
+  max: any;
+
+  checkAcualDate() {
+    console.log("  checkAcualDate() {\n")
+    let actualDay = new Date()
+    let yesterday = new Date(actualDay)
+    yesterday.setDate(yesterday.getDate() - 1)
+    this.min = yesterday
+    /* let elem = this.addStudentForm.controls["DOB"].value
+     elem.setAttribute("max", yesterday.toISOString().split('T')[0])
+   */
+    this.min = yesterday
+  }
+
+  validDate() {
+    var today = new Date().toISOString().split('T')[0];
+    this.min = new Date()
+    this.addStudentForm.controls["DOB"].value[0].setAttribute('min', today);
+    this.min = new Date()
   }
 }

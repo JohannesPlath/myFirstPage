@@ -9,9 +9,9 @@
     <form [formGroup]="addStudentForm" novalidate (ngSubmit)="addStudent()" method="post">
       <div class="normalText">
         <label>Student_Id</label>
-        <input type="text" formControlName="student_Id"> <br>
+        <input required type="text" formControlName="student_Id"> <br>
         <label for="First_Name">First_Name</label>
-        <input type="text" formControlName="First_Name" id="First_Name"> <br>
+        <input type="text" formControlName="First_Name" id="First_Name"> <br>  <!--required -->
         <label for="Last_Name">Last_Name</label>
         <input type="text" formControlName="Last_Name" id="Last_Name"> <br>
         <div class="genderChiose">
@@ -22,7 +22,9 @@
         </div>
 
         <label for="DOB">Day of Birth</label>
-        <input type="date" formControlName="DOB" id="DOB"> <br>
+        <input type="date" min="min" [max]="max" formControlName="DOB" id="DOB"> <!--(click)="validDate()"--> >
+        <!--// TODO-->
+        <br> // disable future
         <label for="DOB">Day join</label>
         <input type="date" formControlName="DOY" id="DOY"> <br>
         <label for="Department">Department</label>
