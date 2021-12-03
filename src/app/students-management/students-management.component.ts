@@ -24,11 +24,9 @@ export class StudentsManagementComponent implements OnInit {
   }
 
   directToAdminRemove() {
-
   }
 
   directToAdminUpdate() {
-
   }
 
   showSelectedSemester(event: Event) {

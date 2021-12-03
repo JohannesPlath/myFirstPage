@@ -1,6 +1,6 @@
 :root {
   --primary-color: #333;
-  --primary-color-light: #AAA;
+  --primary-color-light: gray;
   --primary-color-dark: #222;
   --color-primary-darker: hsl(from var(--primary-color) h s calc(60%));
   --color-primary-darkest: hsl(from var(--primary-color) h s calc(-10%));
@@ -108,8 +108,7 @@ body {
     background-color: #d7d7de;
     font-family: Arial, serif;
     font-size: 80%;
-
-    color: aquamarine;
+    color: #AAAAAA;
 
   }
 
@@ -126,22 +125,22 @@ body {
     flex-direction: row;
     flex-flow: row;
     Justify-content: center;
-    min-width: fit-content;
+    min-width: 100%;
     list-style-type: georgian;
     /*max-width: 80%;*/
-    border: 20px solid wheat;
-    border-radius: 10%;
-    background-color: aquamarine;
-    padding: 7%;
+    border: 0.1em solid #e0e0e0;
+    border-radius: 8%;
+    background-color: darkgrey;
+    padding: 5%;
   }
   .logIn {
     display: flex;
     flex-direction: column;
     min-width: fit-content;
-    border: 1px solid gray;
+    border: 0.2em solid gray;
     border-radius: 5%;
-    background-color: aquamarine;
-    padding: 3%;
+    background-color: #e0e0e0;
+    padding: 2%;
     font-family: Arial, monospace;
   }
   .body {
@@ -161,7 +160,7 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: stretch;
-    border: 4px chocolate;
+    //border: 4px chocolate;
     padding: 6px;
     flex-grow: 1;
   }

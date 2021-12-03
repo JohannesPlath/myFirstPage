@@ -12,6 +12,7 @@ import {NewAccountComponent} from "./new-account/new-account.component";
 
 const routes: Routes = [{
   path: '', component: MainLayoutComponent, children: [
+    {path: '', component: LoginComponent},
     {path: 'login', component: LoginComponent},
     {path: 'admin-select', component: AdminSelectPageComponent},
     {path: 'student-work', component: StudentWorkComponent},
