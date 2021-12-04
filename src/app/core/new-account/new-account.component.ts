@@ -47,9 +47,6 @@ export class NewAccountComponent implements OnInit {
       securityLevelPassw++;
       this.setBackgroundColor(securityLevelPassw);
     }
-    if ((countOfSpecialSign <= 0)) {
-
-    }
     if ((countOfLowerCase >= 0)) {
       securityLevelPassw++;
       this.setBackgroundColor(securityLevelPassw);
@@ -62,23 +59,11 @@ export class NewAccountComponent implements OnInit {
       securityLevelPassw++;
       this.setBackgroundColor(securityLevelPassw);
     }
-    if ((countOfLowerCase < 0)) {
 
-
-    }
-    if ((countOfUpperCase < 0)) {
-
-    }
-    if ((countOfNumber < 0)) {
-
-    }
     if ((passWordL.length >= 8)) {
       securityLevelPassw++;
       this.setBackgroundColor(securityLevelPassw);
     }
-    if (((passWordL.length < 8))) {
-    }
-
     if (passWordL !== ConfpassWordS) {
       return false;
     }

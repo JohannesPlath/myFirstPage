@@ -24,10 +24,15 @@ export class AdminAddStdentComponent implements OnInit {
     deverse: [null, Validators.required],
     unknown: [null, Validators.required],
     courseOptions: [null, Validators.required],
-    maxDateDOB: [null, Validators.required],
-    minDateDOB: [null, Validators.required],
-  });
 
+  });
+  mngVis: any;
+  now = new Date();
+  year = this.now.getFullYear();
+  month = this.now.getMonth();
+  day = this.now.getDay();
+  minDate = {year: this.year - 100, month: this.month, day: this.day};
+  maxDate = {year: this.year - 16, month: this.month + 1, day: this.day};
 
   constructor(private fb: FormBuilder, private router: Router) {
   }
@@ -67,41 +72,36 @@ export class AdminAddStdentComponent implements OnInit {
 
     }
     // toDo generate new entry
+
+    this.router.navigate(['/student-management']);
     return true;
   }
 
 
-  /*checkAcualDate() {
-    console.log("  checkAcualDate() {\n")
-    let actualDay = new Date()
-    let yesterday = new Date(actualDay)
+  checkAcualB_Date() {
+    let actualDate = new Date()
+    let yesterday = new Date(actualDate.getFullYear(), actualDate.getMonth(), actualDate.getDay() - 2);
+    // @ts-ignore
+    let elem = document.getElementById("DOB")
+    console.log(elem)
+    // @ts-ignore
+    console.log(yesterday)
+    // @ts-ignore
+    elem.setAttribute("max", yesterday.toISOString().split('T')[0])
+
+  }
+
+
+  checkAcualYoin_Date() {
+    let actualDate = new Date()
+    let yesterday = new Date(actualDate.getFullYear(), actualDate.getMonth(), actualDate.getDay() - 1);
     yesterday.setDate(yesterday.getDate() - 1)
-    this.min = yesterday
-    /!* let elem = this.addStudentForm.controls["DOB"].value
-     elem.setAttribute("max", yesterday.toISOString().split('T')[0])
-   *!/
-    this.min = yesterday
-  }*/
-
-  private actualDay = new Date();
-  maxDateDOB = new Date(this.actualDay.getFullYear(), (this.actualDay.getMonth(), this.actualDay.getDay() - 3));
-  minDateDOB = new Date(this.actualDay.getFullYear() - 1600, (this.actualDay.getMonth(), this.actualDay.getDay() - 3))
-
-  validDate() {
-    let maxDateDOB = this.addStudentForm.controls["maxDateDOB"].value;
-    let minDateDOB = this.addStudentForm.controls["minDateDOB"].value;
-    let actualDate = new Date()//.setHours(0,0,0,0)
-    let maxDateDoB = new Date(actualDate.getFullYear(), actualDate.getMonth(), actualDate.getDay() - 3);
-    let minDateDoB = new Date(actualDate.getFullYear() - 1060, actualDate.getMonth(), actualDate.getDay());
-    /*
-        let minDateDOB = {year: this.year - 1000, month: this.month, day: this.day};
-        let maxDateDOB = {year: this.year, month: this.month + 1, day: this.day - 1};
-
-    var today = new Date().toISOString().split('T')[0];
-    this.min = new Date()*/
-    this.addStudentForm.controls["maxDateDOB"].value.setAttribute('maxDateDOB', maxDateDoB);
-    this.addStudentForm.controls["minDateDOB"].value.setAttribute('maxDateDOB', minDateDoB);
-    console.log(maxDateDoB)
-    console.log(minDateDoB)
+    // @ts-ignore
+    let elem = document.getElementById("DOY")
+    console.log(elem)
+    // @ts-ignore
+    console.log(yesterday)
+    // @ts-ignore
+    elem.setAttribute("max", yesterday.toISOString().split('T')[0])
   }
 }
