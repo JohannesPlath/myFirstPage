@@ -9,11 +9,11 @@
     <form [formGroup]="addStudentForm" novalidate (ngSubmit)="addStudent()" method="post">
       <div class="normalText">
         <label>Student_Id</label>
-        <input type="text" formControlName="student_Id"> <br>
+        <input type="text" formControlName="student_Id" required> <br>
         <label for="First_Name">First_Name</label>
-        <input type="text" formControlName="First_Name" id="First_Name"> <br>
+        <input type="text" formControlName="First_Name" id="First_Name" required> <br>  <!--required -->
         <label for="Last_Name">Last_Name</label>
-        <input type="text" formControlName="Last_Name" id="Last_Name"> <br>
+        <input type="text" formControlName="Last_Name" id="Last_Name" required> <br>
         <div class="genderChiose">
           <input type="radio" formControlName="female" value="female"> female<br>
           <input type="radio" formControlName="male" value="male"> male<br>
@@ -22,22 +22,25 @@
         </div>
 
         <label for="DOB">Day of Birth</label>
-        <input type="date" formControlName="DOB" id="DOB"> <br>
-        <label for="DOB">Day join</label>
-        <input type="date" formControlName="DOY" id="DOY"> <br>
+        <input type="date" min="2018-01-01" max="2021-12-1" formControlName="DOB" id="DOB"
+               (click)="checkAcualB_Date()">
+
+        <br>
+        <label for="DOY">Day join</label>
+        <input type="date" formControlName="DOY" id="DOY" min="1900-01-01" max="2021-12-15"
+               (click)="checkAcualYoin_Date()" required> <br>
         <label for="Department">Department</label>
 
-        <select formControlName="courseOptions" class="dropdown" id="Department" required
-        >
+        <select formControlName="courseOptions" class="dropdown" id="Department" required>
           <option value="Maschienenbau">Maschienenbau</option>
           <option value="Informatik">Informatik</option>
           <option value="Wirtschaftswissenschaft">Wirtschaftswissenschaft</option>
           <option value="Web_Dev.">Web Dev.</option>
         </select>
         <label for="Mail">Mail</label>
-        <input type="email" formControlName="Mail" id="Mail"> <br>
+        <input formControlName="Mail" id="Mail" required type="email"> <br>
       </div>
-      <button id="btnSubmit" button.disabled="false" type="submit" value="Submit" onclick="">Submit</button>
+      <button id="btnSubmit" type="submit" value="Submit" onclick="">Submit</button>
     </form>
   </div>
 </div>
