@@ -22,9 +22,10 @@
         </div>
 
         <label for="DOB">Day of Birth</label>
-        <input type="date" min="min" [max]="max" formControlName="DOB" id="DOB"> <!--(click)="validDate()"--> >
+        <input type="date" [max]="maxDateDOB" [min]="minDateDOB" formControlName="DOB" id="DOB"
+               (click)="validDate()">
         <!--// TODO-->
-        <br> // disable future
+        <br> <!--// disable future-->
         <label for="DOB">Day join</label>
         <input type="date" formControlName="DOY" id="DOY"> <br>
         <label for="Department">Department</label>
