@@ -80,7 +80,7 @@ export class AdminAddStdentComponent implements OnInit {
 
   checkAcualB_Date() {
     let actualDate = new Date()
-    let yesterday = new Date(actualDate.getFullYear(), actualDate.getMonth(), actualDate.getDay() - 2);
+    let yesterday = new Date(actualDate.getFullYear(), actualDate.getMonth(), actualDate.getDate());
     // @ts-ignore
     let elem = document.getElementById("DOB")
     console.log(elem)
@@ -94,7 +94,7 @@ export class AdminAddStdentComponent implements OnInit {
 
   checkAcualYoin_Date() {
     let actualDate = new Date()
-    let yesterday = new Date(actualDate.getFullYear(), actualDate.getMonth(), actualDate.getDay() - 1);
+    let yesterday = new Date(actualDate.getFullYear(), actualDate.getMonth(), actualDate.getDate());
     yesterday.setDate(yesterday.getDate() - 1)
     // @ts-ignore
     let elem = document.getElementById("DOY")

@@ -130,7 +130,7 @@
     "JoiningYr": "2016.10.01"
   },
   {
-    "ID": "13",
+    "ID": "15",
     "FirstName": "Marry",
     "LastName": "Poppins",
     "Gender": "2",
@@ -138,5 +138,55 @@
     "Department": "Wirtschaftswissenschaft",
     "EmailID": "marpo@gmail.com",
     "JoiningYr": "2020.04.01"
+  },
+  {
+    "ID": "16",
+    "FirstName": "Frieda",
+    "LastName": "Party",
+    "Gender": "4",
+    "DOB": "1994/07/25",
+    "Department": "Maschienenbau",
+    "EmailID": "fri_par@gmail.com",
+    "JoiningYr": "2017/10/01"
+  },
+  {
+    "ID": "17",
+    "FirstName": "Don",
+    "LastName": "Johnson",
+    "Gender": "1",
+    "DOB": "1968/07/25",
+    "Department": "Wirtschaftswissenschaft",
+    "EmailID": "dickDon@gmail.com",
+    "JoiningYr": "2016/10/01"
+  },
+  {
+    "ID": "18",
+    "FirstName": "Bartholemus",
+    "LastName": "Ceasar",
+    "Gender": "3",
+    "DOB": "1970/07/25",
+    "Department": "WEB",
+    "EmailID": "BeBro@gmail.com",
+    "JoiningYr": "2020/10/01"
+  },
+  {
+    "ID": "19",
+    "FirstName": "Tomha",
+    "LastName": "Siuk",
+    "Gender": "2",
+    "DOB": "1995/06/25",
+    "Department": "IT",
+    "EmailID": "tom_si@gmail.com",
+    "JoiningYr": "2017.10.01"
+  },
+  {
+    "ID": "20",
+    "FirstName": "Patrisha",
+    "LastName": "Rosenbaum",
+    "Gender": "2",
+    "DOB": "1994/05/05",
+    "Department": "WEB",
+    "EmailID": "patro@gmail.com",
+    "JoiningYr": "2019.04.01"
   }
 ]
